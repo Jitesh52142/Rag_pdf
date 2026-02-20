@@ -1,7 +1,8 @@
 import os
+from google import genai
 from supabase_client import supabase
 from dotenv import load_dotenv
-from google import genai
+
 
 load_dotenv()
 
