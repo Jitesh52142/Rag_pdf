@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF RAG Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>📄 PDF RAG Chatbot</h1>
+
+    <div class="card">
+        <h2>Upload PDF</h2>
+        <form method="POST" enctype="multipart/form-data">
+            <input type="file" name="pdf" required>
+            <button type="submit" class="btn-primary">Process PDF</button>
+        </form>
+    </div>
+
+    <div class="card">
+        <h2>Ask Question</h2>
+        <form method="POST">
+            <input type="text" name="question" placeholder="Ask something from your document..." required>
+            <button type="submit" class="btn-primary">Ask</button>
+        </form>
+    </div>
+
+    {% if answer %}
+    <div class="chat-box">
+        <h3>Response</h3>
+        <div class="response">
+            {{ answer }}
+        </div>
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
