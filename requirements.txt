@@ -1,6 +1,6 @@
 flask
 supabase
-google-generativeai
+google-genai==0.3.0
 PyPDF2
 numpy
 python-dotenv
