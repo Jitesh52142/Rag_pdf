@@ -2,6 +2,7 @@ import os
 from google import genai
 from supabase_client import supabase
 from dotenv import load_dotenv
+import google.generativeai as genai
 
 load_dotenv()
 
